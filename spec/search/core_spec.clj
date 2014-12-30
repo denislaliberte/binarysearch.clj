@@ -9,7 +9,6 @@
     (should= -1 (search 2 [1 3 5 ]))
   )
   (it "return the first index when the item is in the first position"
-  (pending)
     (should= 0 (search  3 [3]))
     (should= 0 (search  1 [1 3 5]))
   )
