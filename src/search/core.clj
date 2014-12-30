@@ -7,7 +7,7 @@
 
 (defn search [a b ]
   (cond
-    (= a (get b 0)) 0
+    (= a (get b (middleIndex b))) (middleIndex b)
     :else -1
   )
 )
