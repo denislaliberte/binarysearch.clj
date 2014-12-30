@@ -19,6 +19,9 @@
     (should= 1 (search 3 [1 3 5 ]))
     (should= 2 (search 5 [1 3 5 7 9 ]))
   )
+  (it "return the index of the last element"
+    (should= 2 (search 5 [1 3 5]) (pending))
+  )
 )
 
 (describe "middleIndex"
@@ -46,4 +49,11 @@
     (should-not (moreThanOne []))
   )
 )
+
+(describe "greaterThanMiddle"
+  (it "return test if the first argument is greater than the middle element"
+    (should (greaterThanMiddle 5 [1 3 5]))
+  )
+)
+
 

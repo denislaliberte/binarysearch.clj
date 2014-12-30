@@ -13,7 +13,10 @@
   (> (count a) 1)
 )
 
-(defmacro dbg[x] `(let [x# ~x] (println "dbg:" '~x "=" x#) x#))
+(defn greaterThanMiddle "Test if the argument is greater than the middle ellement of the vector" [a b]
+  (> (get b (middleIndex b) a))
+)
+
 
 (defn search [a b ]
   (cond
