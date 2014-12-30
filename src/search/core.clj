@@ -9,6 +9,10 @@
   (into [] (first (split-at (middleIndex a) a)))
 )
 
+(defn secondHalf "Return the first half of a vector" [a]
+  (into [] (last (split-at (inc (middleIndex a)) a)))
+)
+
 (defn moreThanOne "Test if the vector have more than one item" [a]
   (> (count a) 1)
 )

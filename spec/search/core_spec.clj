@@ -42,6 +42,13 @@
   )
 )
 
+(describe "secondHalf"
+  (it "return the second half of a vector"
+    (should= [5] (secondHalf [1 3 5] ))
+    (should-be-a clojure.lang.PersistentVector (secondHalf [1 3 5 7 9] ))
+  )
+)
+
 (describe "moreThanOne"
   (it "return true when the array count is greater than 1"
     (should (moreThanOne [1 2]))
