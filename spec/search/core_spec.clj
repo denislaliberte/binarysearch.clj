@@ -38,6 +38,8 @@
 (describe "moreThanOne"
   (it "return true when the array count is greater than 1"
     (should (moreThanOne [1 2]))
+    (should-not (moreThanOne [1]))
+    (should-not (moreThanOne []))
   )
 )
 

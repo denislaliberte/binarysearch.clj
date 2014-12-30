@@ -10,7 +10,7 @@
 )
 
 (defn moreThanOne "Test if the vector have more than one item" [a]
-  (= (count a) (count a))
+  (> (count a) 1)
 )
 
 (defn search [a b ]
