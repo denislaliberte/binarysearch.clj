@@ -1,9 +1,8 @@
 (ns search.core)
 
 
-(defn middleIndex[a]
-  (count a
-  )
+(defn middleIndex "return the index of the middle item of a vector" [a]
+  (quot (count a) 2)
 )
 
 (defn search [a b ]
