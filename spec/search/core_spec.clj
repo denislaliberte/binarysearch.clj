@@ -3,13 +3,15 @@
             [search.core :refer :all]))
 
 (describe "Search"
-  (it "return not found flag when i search an item in an empty list"
+  (it "return not found flag when the item is not in the vector"
     (should= -1 (search  3 []))
+    (should= -1 (search  3 [5]))
+    (should= -1 (search 2 [1 3 5 ]))
   )
   (it "return the first index when the item is in the first position"
     (should= 0 (search  3 [3]))
   )
-  (it "return the middle index of a three item vector"
+  (it "return the middle index of a three item vector when the item is in the second position"
     (should= 1 (search 3 [1 3 5 ]))
   )
 )
