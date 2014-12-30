@@ -27,7 +27,7 @@
     (= a (get b (middleIndex b))) (middleIndex b)
     (moreThanOne b)
       (cond
-        (> a 3) 2
+        (greaterThanMiddle a b) 2
         :else (search a (firstHalf b))
       )
     :else -1

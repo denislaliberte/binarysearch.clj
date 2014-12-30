@@ -21,6 +21,7 @@
   )
   (it "return the index of the last element"
     (should= 2 (search 5 [1 3 5]))
+    (should= 2 (search 3 [1 2 3 ]))
   )
 )
 
