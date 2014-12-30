@@ -6,12 +6,14 @@
 )
 
 (defn firstHalf "Return the first half of a vector" [a]
-  (first (split-at (middleIndex a) a))
+  (into [] (first (split-at (middleIndex a) a)))
 )
 
 (defn moreThanOne "Test if the vector have more than one item" [a]
   (> (count a) 1)
 )
+
+(defmacro dbg[x] `(let [x# ~x] (println "dbg:" '~x "=" x#) x#))
 
 (defn search [a b ]
   (cond
