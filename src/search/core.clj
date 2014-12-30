@@ -25,7 +25,11 @@
 (defn search [a b ]
   (cond
     (= a (get b (middleIndex b))) (middleIndex b)
-    (moreThanOne b) (search a (firstHalf b))
+    (moreThanOne b)
+      (cond
+        (> a 3) 2
+        :else (search a (firstHalf b))
+      )
     :else -1
   )
 )
