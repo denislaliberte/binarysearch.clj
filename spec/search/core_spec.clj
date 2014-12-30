@@ -7,13 +7,17 @@
     (should= -1 (search  3 []))
     (should= -1 (search  3 [5]))
     (should= -1 (search 2 [1 3 5 ]))
+    (should= -1 (search 9 [1 3 5 ]))
   )
   (it "return the first index when the item is in the first position"
     (should= 0 (search  3 [3]))
     (should= 0 (search  1 [1 3 5]))
+    (should= 0 (search  1 [1 3 5 7]))
+    (should= 0 (search  1 [1 3 5 7 9]))
   )
-  (it "return the middle index of a three item vector when the item is in the second position"
+  (it "return the middle index of a vector when the item is in the middle position"
     (should= 1 (search 3 [1 3 5 ]))
+    (should= 2 (search 5 [1 3 5 7 9 ]))
   )
 )
 
