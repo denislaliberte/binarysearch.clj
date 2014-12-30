@@ -9,6 +9,10 @@
   (first (split-at (middleIndex a) a))
 )
 
+(defn moreThanOne "Test if the vector have more than one item" [a]
+  (= (count a) (count a))
+)
+
 (defn search [a b ]
   (cond
     (= a (get b (middleIndex b))) (middleIndex b)

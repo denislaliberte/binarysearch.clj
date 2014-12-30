@@ -9,6 +9,7 @@
     (should= -1 (search 2 [1 3 5 ]))
   )
   (it "return the first index when the item is in the first position"
+  (pending)
     (should= 0 (search  3 [3]))
     (should= 0 (search  1 [1 3 5]))
   )
@@ -31,6 +32,12 @@
   (it "return the first half of a vector"
     (should= [1] (firstHalf [1 3 5] ))
     (should= [1 3] (firstHalf [1 3 5 7 9] ))
+  )
+)
+
+(describe "moreThanOne"
+  (it "return true when the array count is greater than 1"
+    (should (moreThanOne [1 2]))
   )
 )
 
