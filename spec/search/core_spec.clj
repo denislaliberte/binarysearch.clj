@@ -16,8 +16,11 @@
 )
 
 (describe "middleIndex"
-  (it "return the first index when the array is empty or contain only one item"
+  (it "return the first index when the vector is empty or contain only one item"
     (should= 0 (middleIndex []))
     (should= 0 (middleIndex [1]))
+  )
+  (it "return the second item index in an three item vector "
+    (should= 1 (middleIndex[1 2 3]))
   )
 )
