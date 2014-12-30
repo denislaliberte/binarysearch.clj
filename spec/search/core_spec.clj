@@ -10,6 +10,8 @@
   )
   (it "return the first index when the item is in the first position"
     (should= 0 (search  3 [3]))
+    (pending)
+    (should= 0 (search  1 [1 3 5]))
   )
   (it "return the middle index of a three item vector when the item is in the second position"
     (should= 1 (search 3 [1 3 5 ]))
@@ -25,3 +27,10 @@
     (should= 1 (middleIndex[1 2 3]))
   )
 )
+
+(describe "firstHalf"
+  (it "return the first half of a vector"
+    (should= [1] (firstHalf [1 3 5] ))
+  )
+)
+

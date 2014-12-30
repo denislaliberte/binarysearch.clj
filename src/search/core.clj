@@ -5,6 +5,10 @@
   (quot (count a) 2)
 )
 
+(defn firstHalf "Return the first half of a vector" [a]
+  (first (split-at (middleIndex a) a))
+)
+
 (defn search [a b ]
   (cond
     (= a (get b (middleIndex b))) (middleIndex b)
