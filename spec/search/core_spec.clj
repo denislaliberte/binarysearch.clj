@@ -10,7 +10,6 @@
   )
   (it "return the first index when the item is in the first position"
     (should= 0 (search  3 [3]))
-    (pending)
     (should= 0 (search  1 [1 3 5]))
   )
   (it "return the middle index of a three item vector when the item is in the second position"
