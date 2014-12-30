@@ -60,6 +60,7 @@
 (describe "greaterThanMiddle"
   (it "return test if the first argument is greater than the middle element"
     (should (greaterThanMiddle 5 [1 3 5]))
+    (should-not (greaterThanMiddle 1 [1 3 5]))
   )
 )
 

@@ -18,7 +18,7 @@
 )
 
 (defn greaterThanMiddle "Test if the argument is greater than the middle ellement of the vector" [a b]
-  (> (get b (middleIndex b) a))
+  (> a (get b (middleIndex b)))
 )
 
 
