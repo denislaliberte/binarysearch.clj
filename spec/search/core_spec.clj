@@ -14,3 +14,9 @@
     (should= 1 (search 3 [1 3 5 ]))
   )
 )
+
+(describe "middleIndex"
+  (it "return the index of the middle item of a vector"
+    (should= 0 (middleIndex []))
+  )
+)
