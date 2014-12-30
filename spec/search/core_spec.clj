@@ -4,6 +4,9 @@
 
 (describe "Search"
   (it "return not found flag when i search an item in an empty list"
-    (should= -1 (search  3 '()))
+    (should= -1 (search  3 []))
+  )
+  (it "return the first index when the item is in the first position"
+    (should= 0 (search  3 [3]))
   )
 )
