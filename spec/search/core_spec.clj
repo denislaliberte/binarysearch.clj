@@ -31,6 +31,7 @@
 (describe "firstHalf"
   (it "return the first half of a vector"
     (should= [1] (firstHalf [1 3 5] ))
+    (should= [1 3] (firstHalf [1 3 5 7 9] ))
   )
 )
 
