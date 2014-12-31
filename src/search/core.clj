@@ -28,7 +28,10 @@
       (= a (get b middle)) middle
       (moreThanOne b)
         (cond
-          (greaterThanMiddle a b) (cond (= -1 (search a (secondHalf b)) ) -1 :else (+ (inc middle) (search a (secondHalf b))))
+          (greaterThanMiddle a b) 
+            (let [result (search a (secondHalf b))]
+              (cond (= -1 result ) -1 :else (+ (inc middle) result))
+            )
           :else (search a (firstHalf b))
         )
       :else -1
