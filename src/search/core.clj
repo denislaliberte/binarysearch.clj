@@ -22,19 +22,19 @@
 )
 
 
-(defn search [a b ]
-  (let [middle (middleIndex b), emptyFlag -1]
+(defn search [item vector]
+  (let [middle (middleIndex vector), emptyFlag -1]
     (cond
-      (= a (get b middle)) middle
-      (moreThanOne b)
+      (= item (get vector middle)) middle
+      (moreThanOne vector)
         (cond
-          (greaterThanMiddle a b)
-            (let [result (search a (secondHalf b))]
+          (greaterThanMiddle item vector)
+            (let [result (search item (secondHalf vector))]
               (cond
                 (= emptyFlag result ) emptyFlag
                 :else (+ (inc middle) result))
             )
-          :else (search a (firstHalf b))
+          :else (search item (firstHalf vector))
         )
       :else emptyFlag
     )
