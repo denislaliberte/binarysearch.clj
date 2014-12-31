@@ -23,14 +23,16 @@
 
 
 (defn search [a b ]
-  (cond
-    (= a (get b (middleIndex b))) (middleIndex b)
-    (moreThanOne b)
-      (cond
-        (greaterThanMiddle a b) (cond (= -1 (search a (secondHalf b)) ) -1 :else (+ (inc (middleIndex b)) (search a (secondHalf b))))
-        :else (search a (firstHalf b))
-      )
-    :else -1
+  (let [middle (middleIndex b)]
+    (cond
+      (= a (get b middle)) middle
+      (moreThanOne b)
+        (cond
+          (greaterThanMiddle a b) (cond (= -1 (search a (secondHalf b)) ) -1 :else (+ (inc (middleIndex b)) (search a (secondHalf b))))
+          :else (search a (firstHalf b))
+        )
+      :else -1
+    )
   )
 )
 
