@@ -22,7 +22,7 @@
 )
 
 
-(defn search [item vector]
+(defn search "Search an item in a vector, implement binary search" [item vector]
   (let [middle (middleIndex vector), emptyFlag -1]
     (cond
       (= item (get vector middle)) middle
